@@ -1,8 +1,5 @@
-//
-// Created by Aidan Kubala on 10/26/22.
-//
 
-void echo(char* input);
+int checkbuiltins(char* arg);
 
 void clr();
 
@@ -14,6 +11,6 @@ int quit();
 
 void enterpause();
 
-char* environ(char *name);
+char* environname(char *name);
 
 void help();
