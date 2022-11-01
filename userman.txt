@@ -1,3 +1,23 @@
-USER MANUAL PLACEHOLDER
+USER MANUAL
 
-to be completed
+Hello! This is Aidan Kubala's Project 2 myshell program!
+
+Built in commands:
+cd <directory> :
+    no argument to see the current working directory,
+    add an argument to change the working directory
+clr :
+    clear the screen
+dir <directory> :
+    list contents of target directory,
+    no argument to see contents of current working directory
+environ :
+    list all environment strings
+echo <input> :
+    prints out the input on the screen
+help :
+    the command that brings up this help menu
+pause :
+    pause the program until the 'enter' key is pressed
+quit :
+    quit the program
