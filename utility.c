@@ -1,11 +1,11 @@
 //
-// Created by Aidan Kubala on 10/26/22.
+// Created by Aidan Kubala on 10/18/22.
 //
 #include <stdlib.h>
 #include <dirent.h>
 #include <stdio.h>
 #include <unistd.h>
-
+#include <string.h>
 #include "utility.h"
 
 int quit(){
@@ -14,10 +14,6 @@ int quit(){
 
 int cd(char *dir){
     return chdir(dir);
-}
-
-void echo(char* input){
-    printf("%s ", input);
 }
 
 
@@ -38,7 +34,7 @@ void enterpause(){
     }
 }
 
-char* environ(char* name){
+char* environname(char* name){
     return getenv(name);
 }
 
@@ -53,3 +49,15 @@ void help(){
     }
 
 }
+
+int checkbuiltins(char* arg){
+    int i;
+    const char *builtins[] = {"cd", "clr", "dir", "environ", "echo", "help", "pause", "quit"};
+    for (i=0;i<8;i++){
+        if (strcmp(arg,builtins[i])){
+            return i;
+        }
+    }
+    return -1;
+}
+
